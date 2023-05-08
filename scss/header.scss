@@ -1,0 +1,109 @@
+header {
+    display: flex;
+    justify-content: center;
+    height: 7.2rem;
+    width: 100%;
+    position: fixed;
+    background: $black;
+    z-index: 10;
+}
+
+.links {
+    display: flex;
+    margin-top: 2.5rem;
+    height: 3.5rem;
+    gap: 3.5rem;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 140rem;
+    height: 7.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    gap: 3rem;
+    padding: 0 2rem;
+    z-index: 1;
+
+    & .links a {
+        padding-bottom: 3.9rem;
+        opacity: 69%;
+        transition: 0.3s;
+    }
+    & .links a:hover {
+        opacity: 100%;
+    }
+
+    & #burger {
+        display: none;
+    }
+
+    /* JS classes */
+    & .links a.active {
+        opacity: 100%;
+        border-bottom: solid 2px $light-orange;
+        transition: .3s;
+    }
+}
+
+
+
+
+/* mobile view */
+@media (max-width: 768px){
+
+    header {
+        width: 100vw;
+    }
+
+    nav {
+        justify-content: space-between;
+        padding: 0 4rem;
+    }
+
+    nav .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 4.7rem;
+        padding: 2rem 0;
+        height: auto;
+        background: #1C1C1C;
+        transform: translateY(-150%);
+        opacity: 0;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        gap: 4rem;
+        z-index: -1;
+        /* transition: .3s; */
+    }
+    nav .links a {
+        padding-bottom: .5rem;
+        opacity: 100%;
+    }
+
+    /* NAV animation */
+    nav .links.absolute {
+        transform: translateY(0%);
+        opacity: 1;
+        transition: .3s;
+    }
+
+    nav #burger {
+        cursor: pointer;
+        display: block;
+        transition: .3s;
+    }
+
+    nav #burger.rotate {
+        transform: rotateZ(-90deg);
+    }
+}

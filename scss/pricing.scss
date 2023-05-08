@@ -1,0 +1,154 @@
+.pricing {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: $blue;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 140rem;
+        margin: 11rem 0;
+        h2 {
+            @include h1;
+        }
+        span {
+            display: block;
+            font-size: 9.4rem;
+            line-height: 11.5rem;
+            margin: .5rem 0;
+        }
+        p {
+            @include p-smaller;
+            font-weight: normal;
+        }
+        h4 {
+            @include h2;
+            font-weight: normal;
+            padding-bottom: 1.4rem 0;
+        }
+        img {
+            margin: 2rem 0;
+            height: .2rem;
+        }
+        .pricing-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 4rem;
+            margin-top: 8rem;
+            &__box-1 {
+                width: 100%;
+                &__top {
+                    background: #333333;
+                    text-align: center;
+                    padding: 1.4rem 0;
+                    border-radius: .5rem .5rem 0 0;
+                    p {
+                        opacity: .5;
+                    }
+                }
+                &__mid {
+                    background: $green;
+                    height: .6rem;
+                    width: 100%;
+                }
+                &__botton {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    padding: 1rem 0;
+                    background: $white;
+                    text-align: center;
+                    border-radius: 0 0 .5rem .5rem;
+                    p {
+                        color: $mid-grey;
+                    }
+                }
+            }
+            &__box-2 {
+                width: 100%;
+                &__top {
+                    background: $dark-grey;
+                    text-align: center;
+                    padding: 1.4rem 0;
+                    border-radius: .5rem .5rem 0 0;
+                    p {
+                        opacity: .5;
+                    }
+                }
+                &__mid {
+                    background: $green;
+                    width: 100%;
+                    p {
+                        color: $white;
+                        text-align: center;
+                        line-height: 4rem;
+                    }
+                }
+                &__botton {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    padding: 1rem 0;
+                    background: $white;
+                    text-align: center;
+                    border-radius: 0 0 .5rem .5rem;
+                    p {
+                        color: $mid-grey;
+                    }
+                }
+            }
+            &__box-3 {
+                width: 100%;
+                &__top {
+                    background: $dark-grey;
+                    text-align: center;
+                    padding: 1.4rem 0;
+                    border-radius: .5rem .5rem 0 0;
+                    p {
+                        opacity: .5;
+                    }
+                }
+                &__mid {
+                    background: $green;
+                    height: .6rem;
+                    width: 100%;
+                }
+                &__botton {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    padding: 1rem 0;
+                    background: $white;
+                    text-align: center;
+                    border-radius: 0 0 .5rem .5rem;
+                    p {
+                        color: $mid-grey;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+/* mobile view */
+@media (max-width: 768px){
+    .pricing {
+        width: 100vw;
+        &__content {
+            margin: 5rem 0;
+            padding: 0 2rem;
+
+            .pricing-container {
+                flex-direction: column;
+                margin-top: 4rem;
+            }
+        }
+    }
+    
+}

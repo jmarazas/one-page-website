@@ -1,0 +1,173 @@
+.tabs {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    background: transparent linear-gradient(270deg, $blue 0%, $light-orange 100%) 0% 0% no-repeat padding-box;
+    position: relative;
+    z-index: 0;
+    &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/app/images/christoffer-engstrom-503481-unsplash.png");
+        opacity: .42;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        z-index: -1;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5rem;
+        width: 100%;
+        margin: 11rem 0;
+        max-width: 140rem;
+    
+        &__left {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            
+            .button {
+                background: $light-orange-hover;
+                width: 10rem;
+                height: 10rem;
+                border: none;
+                transition: .2s;
+                &:hover {
+                    cursor: url('/app/images/description-cursor-icon-with-shadow-32.png'), pointer;
+                    background: $light-orange;
+                    box-shadow: 0px 3px 6px $black-shadow;
+                    span {
+                        opacity: 1;
+                    }
+                }
+    
+                span {
+                    display: inline-block;
+                    transform: rotate(-45deg);
+                    opacity: .5;
+                }
+            }
+            .button:active {
+                background: $light-orange;
+                box-shadow: 0px 3px 6px $black-shadow;
+            }
+        }
+    
+            
+        &__center {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            h1 {
+                @include h1;
+            }
+            p {
+                @include p;
+                line-height: 2rem;
+            }
+        }
+    
+        &__right {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            width: 40rem;
+    
+            .tabs__images {
+                display: flex;
+                justify-content: space-between;
+            }
+    
+            .tabs__images__img {
+                position: relative;
+                .tabs_text {
+                    font-size: 2rem;
+                    position: absolute;
+                    top: 42%;
+                    left: 30%;
+                    opacity: 0;
+                    transition: .2s;
+                }
+                .tabs_text-2 {
+                    font-size: 2rem;
+                    position: absolute;
+                    top: 42%;
+                    left: 40%;
+                    opacity: 0;
+                    transition: .2s;
+                }
+                &:hover {
+                    cursor: url('/app/images/description-cursor-icon-with-shadow-32.png'), pointer;
+                    // cursor: pointer;
+                    .tabs_img {
+                        opacity: .5;
+                    }
+                    .tabs_text {
+                        opacity: 1;
+                        z-index: 1;
+                    }
+                    .tabs_text-2 {
+                        opacity: 1;
+                        z-index: 1;
+                    }
+                }   
+            }
+    
+        }
+    }
+}
+
+
+
+
+/* mobile view */
+@media (max-width: 768px){
+    .tabs {
+        width: 100vw;
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5rem;
+            width: 100%;
+            margin: 5rem 0;
+            padding: 0 2rem;
+        
+            &__left {
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+            }
+        
+            &__right {
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                &__top {
+                    img {
+                        height: 17rem;
+                    }
+                }
+                &__bottom {
+                    img {
+                        width: 100%;
+                    }
+                }
+                
+            }
+        }
+    }
+    
+}

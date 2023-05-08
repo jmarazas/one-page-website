@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&family=Lora&family=Montserrat:wght@400;600&display=swap');
+@import 'reset';
+@import 'variables';
+
+@import 'header';
+@import 'features';
+@import 'social';
+@import 'about';
+@import 'tabs';
+@import 'pricing';
+@import 'reviews';
+@import 'contacts';
+@import 'footer';
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* sections */
+// section {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+//     padding: 50px;
+//     box-sizing: border-box;
+//     gap: 30px;
+//     background: purple;
+// }
+
+
+
+

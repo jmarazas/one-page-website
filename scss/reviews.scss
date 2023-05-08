@@ -1,0 +1,128 @@
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6rem 0;
+    h2 {
+        @include h1;
+        color: $black;
+    }
+    .line {
+        display: block;
+        width: 6.4rem;
+        color: $black;
+        border-bottom: .3rem solid $blue;
+        margin: 5.4rem 0;
+    }
+    .swiper {
+        display: flex;
+        width: 100%;
+        max-width: 1400px;
+        height: 300px;
+    }
+    
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        padding: 0 6rem;
+    }
+    
+    .swiper-slide h1 {
+        border-radius: 8px;
+        padding: 30px;
+        font-family: verdana;
+    }
+    
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $light-orange;
+        transition: .3s;
+    }
+    
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        text-shadow: 0 0 5px $black-shadow;
+        transform: scale(1.1);
+    }
+    
+    .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // transform: translateY(10px);
+    }
+    
+    
+    .swiper-pagination-bullet {
+        background: none;
+        border: .2rem solid $light-orange;
+        width: 1rem;
+        height: 1rem;
+        transition: .3s;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $light-orange;
+    }
+}
+
+// swiperio turinys
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+        background: $blue;
+        padding: 2rem;
+        border-radius: .8rem;
+        p {
+            @include p;
+            font-weight:300;
+        }
+    }
+
+    &__avatar {
+        display: flex;
+        width: 100%;
+        justify-content: left;
+        gap: 1.6rem;
+        margin-top: 2rem;
+        
+        &__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p {
+                @include h2;
+                color: $dark-grey;
+                font-weight: normal;
+            }
+            span {
+                font-size: 1.4rem;
+                line-height: 1.68rem;
+                font-weight: normal;
+                color: $mid-grey;
+            }
+
+        }
+    }
+}
+
+
+/* mobile view */
+@media (max-width: 768px){
+    .reviews {
+        margin: 4rem 0;
+        h2 {
+            text-align: center;
+        }
+        .line {
+            width: 6.4rem;
+            margin: 3rem 0;
+        }
+    }
+
+}

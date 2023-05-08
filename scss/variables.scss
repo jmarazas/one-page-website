@@ -1,0 +1,45 @@
+$light-orange: #E27866;
+$light-orange-hover: #A37169;
+$black: #1C1C1C;
+$black-2: #212121;
+$black-shadow: #00000029;
+$green: #41D395;
+$green-hover: #3dbd87;
+$blue: #6696E2;
+$white: #FFFFFF;
+$white-2: #F5F5F5;
+$light-grey: #D8D8D8;
+$mid-grey: #86878B;
+$dark-grey: #333333;
+
+@mixin h1 {
+    font-size: 3.6rem;
+    line-height: 4.3rem;
+}
+
+@mixin h2 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+@mixin h2-bigger {
+    font-size: 3rem;
+    line-height: 4.3rem;
+}
+
+
+@mixin h3 {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+}
+
+
+@mixin p {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+}
+
+@mixin p-smaller {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
