@@ -42,7 +42,7 @@
                 border: none;
                 transition: .2s;
                 &:hover {
-                    cursor: url('../images/description-cursor-icon-with-shadow-32.png'), pointer;
+                    cursor: url("../images/description-cursor-icon-with-shadow-32.png");
                     background: $light-orange;
                     box-shadow: 0px 3px 6px $black-shadow;
                     span {
